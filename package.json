@@ -1,0 +1,31 @@
+{
+  "name": "static-site-on-aws-s3",
+  "version": "1.0.0",
+  "description": "Automated steps of static website hosting on AWS S3",
+  "main": "index.js",
+  "scripts": {
+    "create": "node src/create.js",
+    "update": "node src/update.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/safakadir/static-site-on-aws-s3.git"
+  },
+  "keywords": [
+    "aws",
+    "s3",
+    "static",
+    "website",
+    "hosting"
+  ],
+  "author": "safakadir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/safakadir/static-site-on-aws-s3/issues"
+  },
+  "homepage": "https://github.com/safakadir/static-site-on-aws-s3#readme",
+  "dependencies": {
+    "aws-sdk": "^2.554.0"
+  }
+}
