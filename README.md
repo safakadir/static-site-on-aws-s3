@@ -24,3 +24,14 @@ The bucket policy that should be added:
   ]
 }
 ```
+
+## How to benefit this project as a tool
+- Place static website content into /www
+- Edit config.json
+- Run `npm run create` to initiate your bucket to serve your static website.
+- Run `npm run update` to upload updated static files and change the content.
+
+
+## Remaining Process
+- Create script halfway completed. It doesn't upload files yet.
+- Update script has not been developed yet.
