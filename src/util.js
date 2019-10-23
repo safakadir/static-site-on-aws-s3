@@ -1,10 +1,14 @@
 var util = {
-    asyncRun(context, f, params) {
-        if(typeof f != 'function') throw "First parameter of asyncRun must be a function!";
-        f = f.bind(context);
+    // Context is needed. 
+    // Since it's not called directly as a method, it loses the context and this statements start to produce errors.
+    // Use of bind makes the method regain its original context.
+    // https://stackoverflow.com/questions/24687915/error-turning-amazon-s3-function-into-promises-using-when-node
+    asyncRun(context, method, params) { 
+        if(typeof method != 'function') throw "First parameter of asyncRun must be a function!";
+        method = method.bind(context);
         return new Promise((resolve, reject) => {
             if(params) {
-                f(params, function(err, data) {
+                method(params, function(err, data) {
                     if(err) {
                         reject(err);
                         return;
@@ -13,7 +17,7 @@ var util = {
                 });
             }
             else {
-                f(function(err, data) {
+                method(function(err, data) {
                     if(err) {
                         reject(err);
                         return;
