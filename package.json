@@ -26,6 +26,6 @@
   },
   "homepage": "https://github.com/safakadir/static-site-on-aws-s3#readme",
   "dependencies": {
-    "aws-sdk": "^2.554.0"
+    "aws-sdk": "^2.814.0"
   }
 }
